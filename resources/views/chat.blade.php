@@ -1,7 +1,12 @@
 @extends('layouts/contentNavbarLayout')
 
 @section('title', 'Chat')
-
+{{-- <style>
+    .title:empty:before {
+        content: attr(data-placeholder);
+        color: gray
+    }
+</style> --}}
 @section('vendor-style')
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}">
 @endsection
@@ -33,13 +38,10 @@
                 </p>
             </div>
         </div>
-        <div class="card overflow-hidden mb-4" style="height: auto;">
-            {{-- <h5 class="card-header">Vertical Scrollbar</h5>  --}}
-            <div class="card-body ps ps--active-y" id="vertical-example">
-                <p>
-                    {{ $content }}
-                </p>
-
+        <div class="card mb-9 h-full w-full outline-none" style="height: min-content;">
+            <div class="card-body" id="vertical-example" style="height: min-content;">
+                <textarea class="card-text h-full w-full outline-none" spellcheck="false" style="height: 400px;">{{ $content }}
+                </textarea>
                 <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
                     <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
                 </div>
@@ -48,8 +50,9 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.tailwindcss.com"></script>
     @endisset
 
-    {{--  --}}
+
 
 @endsection

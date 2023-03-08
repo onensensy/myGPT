@@ -51,7 +51,6 @@ class ChatController extends Controller
         // echo $result['choices'][0]['text']; // an open-source, widely-used, server-side scripting language.
 
         $content = trim($result['choices'][0]['text']);
-
         // dd($content);
         return view('chat', compact('prompt', 'content'));
     }

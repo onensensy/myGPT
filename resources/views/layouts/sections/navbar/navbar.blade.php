@@ -1,7 +1,7 @@
 @php
     $containerNav = $containerNav ?? 'container-fluid';
     $navbarDetached = $navbarDetached ?? '';
-    
+
 @endphp
 
 <!-- Navbar -->
@@ -38,6 +38,25 @@
 
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
     myGPT
+    {{-- <form action="/chat" method="post"> --}}
+
+    {{-- <div class="input-group input-group-merge speech-to-text">
+            <input type="text" class="form-control" name="prompt" placeholder="Whats the prompt..." rows="3">
+            <button type="submit" class="input-group-text" id="submit"><i class="bx bx-search"></i></button>
+        </div> --}}
+    <!-- Search -->
+    <div class="navbar-nav align-items-center">
+        <div class="nav-item d-flex align-items-center">
+            <i class="bx bx-search fs-4 lh-0"></i>
+            <form action="/chat" method="post">
+                @csrf
+                <input type="text" name="prompt" class="form-control border-0 shadow-none" placeholder="Search..."
+                    aria-label="Search...">
+            </form>
+        </div>
+    </div>
+    {{-- </form> --}}
+
     <!-- /Search -->
     <ul class="navbar-nav flex-row align-items-center ms-auto">
 
