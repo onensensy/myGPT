@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 $controller_path = 'App\Http\Controllers';
 
+Route::get('/index', function () {
+    return view('index ');
+});
+Route::get('/chat', function () {
+    return view('chat');
+});
+
 // Main Page Route
 Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 
