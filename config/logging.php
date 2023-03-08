@@ -30,10 +30,7 @@ return [
     |
     */
 
-    'deprecations' => [
-        'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
-        'trace' => false,
-    ],
+    'deprecations' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
 
     /*
     |--------------------------------------------------------------------------
@@ -102,7 +99,6 @@ return [
         'syslog' => [
             'driver' => 'syslog',
             'level' => env('LOG_LEVEL', 'debug'),
-            'facility' => LOG_USER,
         ],
 
         'errorlog' => [
