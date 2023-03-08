@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Writebot - AI Writing Assistant for Bloggers</title>
+    <title>Code Helper | By Sensy</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,8 +39,8 @@
                 <form action="/write/generate" method="post" class="inline-flex gap-2 w-full">
                     @csrf
                     <input required name="title" class="w-full outline-none text-2xl font-bold"
-                        placeholder="Type your article title..." />
-                    <button class="rounded-md bg-emerald-500 px-4 py-2 text-white font-semibold">Generate</button>
+                        placeholder="Enter Prompt or error here..." />
+                    <button class="rounded-md bg-emerald-500 px-4 py-2 text-white font-semibold">Go</button>
                 </form>
             </div>
             <div class="w-full rounded-md bg-white border-2 border-gray-600 p-4 min-h-[720px] h-full text-gray-600">
