@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,11 @@ Route::get('/index', function () {
     return view('index ');
 });
 Route::get('/chat', function () {
-    return view('chat');
-});
+    $title = '';
+    $content = '';
+    return view('chat', compact('title', 'content'));
+})->name('chat');
+Route::post('/chat', [ChatController::class, 'sendPrompt']);
 
 // Main Page Route
 Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
