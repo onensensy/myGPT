@@ -32,7 +32,7 @@
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <div class="max-w-6xl w-full mx-auto sm:px-6 lg:px-8 space-y-4 py-4">
             <div class="text-center text-gray-800 dark:text-gray-300 py-4">
-                <h1 class="text-7xl font-bold">Writebot</h1>
+                <h1 class="text-7xl font-bold">Code Helper</h1>by Sensy
             </div>
 
             <div class="w-full rounded-md bg-white border-2 border-gray-600 p-4 min-h-[60px] h-full text-gray-600">
