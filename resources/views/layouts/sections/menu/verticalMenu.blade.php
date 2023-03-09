@@ -7,9 +7,8 @@
         @include('_partials.macros',["width"=>25,"withbg"=>'#696cff'])
       </span>
       <span class="app-brand-text demo menu-text fw-bold ms-2">{{config('variables.templateName')}}</span> --}}
+        {{-- Logo   --}}
         myGPT<i class="bx bx-search fs-4 lh-0"></i>
-        </a>
-
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-autod-block d-xl-none">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
         </a>

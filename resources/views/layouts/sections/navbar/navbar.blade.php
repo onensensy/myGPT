@@ -14,7 +14,8 @@
     }
 </style>
 <div class="text-center text-gray-600 dark:text-gray-150 py-4">
-    <h2 class="text-7xl font-bold">Code Helper</h2>by Sensy
+    <h2 class="text-7xl font-bold">Code Helper</h2>
+    <p>by Sensy</p>
 </div>
 
 <!-- Navbar -->
@@ -48,29 +49,38 @@
         </a>
     </div>
 @endif
-
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-    myGPT<i class="bx bx-search fs-4 lh-0"></i>
+    {{-- @yield('search-bar') --}}
+    <i class="bx bx-search fs-4 lh-0"></i>
     <!-- Search -->
     <div class="navbar-nav align-items-center">
+        {{-- Chat request form  --}}
         <div class="nav-item d-flex align-items-center">
-
             <form action="/chat" method="post">
                 @csrf
                 <input type="text" name="prompt" class="form-control border-0 shadow-none" placeholder="Search..."
                     aria-label="Search...">
-            </form>
+
         </div>
     </div>
-    {{-- </form> --}}
-
     <!-- /Search -->
     <ul class="navbar-nav flex-row align-items-center ms-auto">
-
-        <!-- Place this tag where you want the button to render. -->
         <li class="nav-item lh-1 me-3">
-            <a class="github-button" href="https://github.com/onensensy" data-icon="octicon-star" data-size="large"
-                data-show-count="true" aria-label="Star onensensy on GitHub">Star</a>
+            {{-- <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">Secondary</button>
+                <ul class="dropdown-menu" style="">
+                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Another action</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Something else here</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="javascript:void(0);">Separated link</a></li>
+                </ul>
+            </div> --}}
+            <x-elements.option-button />
+            </form>
         </li>
 
         <!-- User -->
