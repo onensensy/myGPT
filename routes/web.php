@@ -24,7 +24,7 @@ Route::get('/chat', function () {
     $content = '';
     return view('chat', compact('title', 'content'));
 })->name('chat');
-Route::post('/chat', [ChatController::class, 'sendPrompt']);
+Route::post('/chat', [ChatController::class, 'sendPrompt'])->name('chat');
 
 // Main Page Route
 Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');

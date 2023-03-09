@@ -20,16 +20,17 @@
 @endsection
 
 @section('content')
-    <form action="/chat" method="post">
+
+    {{-- <form action="/chat" method="post">
         @csrf
         <div class="input-group input-group-merge speech-to-text">
             <textarea class="form-control" name="prompt" placeholder="Whats the prompt..." rows="3"></textarea>
             <button type="submit" class="input-group-text" id="submit"><i class="bx bx-search"></i></button>
         </div>
-    </form>
+    </form> --}}
     @isset($prompt)
         <div class="divider divider-dark">
-            <div class="divider-text">Next</div>
+            <div class="divider-text">Response</div>
         </div>
         <div class="col-md-12 col-sm-10">
             <div class="card-body">
@@ -50,7 +51,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdn.tailwindcss.com"></script>
     @endisset
 
 

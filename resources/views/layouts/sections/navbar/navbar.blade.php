@@ -3,6 +3,19 @@
     $navbarDetached = $navbarDetached ?? '';
 
 @endphp
+{{-- //Code helper Heading --}}
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    .title:empty:before {
+        content: attr(data-placeholder);
+        color: gray
+    }
+</style>
+<div class="text-center text-gray-600 dark:text-gray-150 py-4">
+    <h2 class="text-7xl font-bold">Code Helper</h2>by Sensy
+</div>
 
 <!-- Navbar -->
 @if (isset($navbarDetached) && $navbarDetached == 'navbar-detached')
@@ -37,17 +50,11 @@
 @endif
 
 <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-    myGPT
-    {{-- <form action="/chat" method="post"> --}}
-
-    {{-- <div class="input-group input-group-merge speech-to-text">
-            <input type="text" class="form-control" name="prompt" placeholder="Whats the prompt..." rows="3">
-            <button type="submit" class="input-group-text" id="submit"><i class="bx bx-search"></i></button>
-        </div> --}}
+    myGPT<i class="bx bx-search fs-4 lh-0"></i>
     <!-- Search -->
     <div class="navbar-nav align-items-center">
         <div class="nav-item d-flex align-items-center">
-            <i class="bx bx-search fs-4 lh-0"></i>
+
             <form action="/chat" method="post">
                 @csrf
                 <input type="text" name="prompt" class="form-control border-0 shadow-none" placeholder="Search..."
@@ -62,16 +69,15 @@
 
         <!-- Place this tag where you want the button to render. -->
         <li class="nav-item lh-1 me-3">
-            <a class="github-button" href="https://github.com/themeselection/sneat-html-laravel-admin-template-free"
-                data-icon="octicon-star" data-size="large" data-show-count="true"
-                aria-label="Star themeselection/sneat-html-laravel-admin-template-free on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/onensensy" data-icon="octicon-star" data-size="large"
+                data-show-count="true" aria-label="Star onensensy on GitHub">Star</a>
         </li>
 
         <!-- User -->
         <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                 <div class="avatar avatar-online">
-                    <img src="{{ asset('assets/img/avatars/1.png') }}" alt class="w-px-40 h-auto rounded-circle">
+                    <img src="{{ asset('assets/img/avatars/1.jpg') }}" alt class="w-px-40 h-auto rounded-circle">
                 </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -80,7 +86,7 @@
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                                 <div class="avatar avatar-online">
-                                    <img src="{{ asset('assets/img/avatars/1.png') }}" alt
+                                    <img src="{{ asset('assets/img/avatars/1.jpg') }}" alt
                                         class="w-px-40 h-auto rounded-circle">
                                 </div>
                             </div>
