@@ -1,7 +1,7 @@
 @php
     $containerNav = $containerNav ?? 'container-fluid';
     $navbarDetached = $navbarDetached ?? '';
-
+    
 @endphp
 {{-- //Code helper Heading --}}
 
@@ -58,8 +58,8 @@
         <div class="nav-item d-flex align-items-center">
             <form action="/chat" method="post">
                 @csrf
-                <input type="text" name="prompt" class="form-control border-0 shadow-none" placeholder="Search..."
-                    aria-label="Search...">
+                <input type="text" name="prompt" class="form-control border-0 shadow-none"
+                    placeholder="{{ old('prompt') }}" aria-label="Search..." value="{{ old('prompt') }}">
 
         </div>
     </div>
@@ -79,7 +79,7 @@
                     <li><a class="dropdown-item" href="javascript:void(0);">Separated link</a></li>
                 </ul>
             </div> --}}
-            <x-elements.option-button />
+            @yield('optionButton')
             </form>
         </li>
 
