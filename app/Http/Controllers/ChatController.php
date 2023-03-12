@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ChatController extends Controller
 {
+    public function index()
+    {
+        return view('chat');
+    }
+
     public function sendPrompt(Request $request)
     {
 
@@ -35,7 +40,7 @@ class ChatController extends Controller
         // ]);
 
         switch ($option) {
-            case 0:
+            case "General":
                 $result = OpenAI::completions()->create([
                     "model" => "text-davinci-003",
                     "temperature" => 0.7,
@@ -46,11 +51,11 @@ class ChatController extends Controller
                     'prompt' => sprintf($prompt),
                 ]);
                 $content = trim($result['choices'][0]['text']);
-                return view('chat', compact('prompt', 'content'));
+                return view('chat', compact('prompt', 'content', 'option'));
 
 
                 break;
-            case 1:
+            case "Laravel":
                 $result = OpenAI::completions()->create([
                     "model" => "text-davinci-003",
                     "temperature" => 0.7,
@@ -58,19 +63,17 @@ class ChatController extends Controller
                     "frequency_penalty" => 0,
                     "presence_penalty" => 0,
                     'max_tokens' => 600,
-                    'prompt' => 'Laravel is a powerful PHP web application framework that provides a simple, elegant syntax for creating robust web applications. As a Laravel-focused AI model, my responses will be tailored to Laravel-specific topics, such as working with controllers, models, views, routes, middleware, and more. Let\'s dive into the world of Laravel programming!
+                    'prompt' => 'As a Laravel-focused AI expert, your role is to provide accurate and insightful information related to Laravel programming. You should be able to answer questions related to Laravel\'s core concepts, such as working with controllers, models, views, routes, middleware, and more. You should also be able to provide expert tips and best practices for optimizing Laravel code and building scalable applications. Your responses should stay in character as a Laravel-focused AI expert, providing clear and concise explanations while also being friendly and approachable. When asked who you are, please dont forget to mention that You were fine tuned by Onen Sensy by you are not Onen Sensy, You are Laravel Code Helper. Let\'s dive into the world of Laravel programming together!. The Prompt is as follows:
                 ' . sprintf($prompt),
                 ]);
                 $content = trim($result['choices'][0]['text']);
-                return view('chat', compact('prompt', 'content'));
+                return view('chat', compact('prompt', 'content', 'option'));
 
 
                 break;
 
             default:
-                $content = "Help Module for " . $option . " has not yet been implemented. You can contribute to the code via
-
-https://github.com/onensensy/myGPT";
+                $content = "Help Module for " . $option . " has not yet been implemented. You can contribute to the code via https://github.com/onensensy/myGPT";
                 return view('chat', compact('prompt', 'content'));
                 break;
         }

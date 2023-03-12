@@ -1,68 +1,68 @@
 {
-  "menu": [
-    {
-      "url": "/",
-      "name": "Home",
-      "icon": "menu-icon tf-icons bx bx-home-circle",
-      "slug": "dashboard-analytics"
-    },
-    {
-      "url": "/chat",
-      "name": "Chat",
-      "icon": "menu-icon tf-icons bx bx-conversation",
-      "slug": "chat"
-    },
-    
-    {
-      "name": "History",
-      "icon": "menu-icon tf-icons bx bx-layout",
-      "slug": "layouts",
-      "submenu": [
+    "menu": [
         {
-          "url": "/layouts/without-menu",
-          "name": "Without menu",
-          "slug": "layouts-without-menu"
+            "url": "/",
+            "name": "Home",
+            "icon": "menu-icon tf-icons bx bx-home-circle",
+            "slug": "dashboard-analytics"
         },
         {
-          "url": "/layouts/without-navbar",
-          "name": "Without navbar",
-          "slug": "layouts-without-navbar"
+            "url": "/chat",
+            "name": "Chat",
+            "icon": "menu-icon tf-icons bx bx-conversation",
+            "slug": "chat"
+        },
+
+        {
+            "name": "Modules",
+            "icon": "menu-icon tf-icons bx bx-layout",
+            "slug": "layouts",
+            "submenu": [
+                {
+                    "url": "/chat",
+                    "name": "Code Helper",
+                    "slug": "chat"
+                },
+                {
+                    "url": "/layouts/without-navbar",
+                    "name": "Article Writer",
+                    "slug": "layouts-without-navbar"
+                },
+                {
+                    "url": "/layouts/container",
+                    "name": "Art Creator",
+                    "slug": "layouts-container"
+                },
+                {
+                    "url": "/layouts/fluid",
+                    "name": "Fluid",
+                    "slug": "layouts-fluid"
+                },
+                {
+                    "url": "/layouts/blank",
+                    "name": "Blank",
+                    "slug": "layouts-blank",
+                    "target": "_blank"
+                }
+            ]
+        },
+
+        {
+            "menuHeader": "Misc"
         },
         {
-          "url": "/layouts/container",
-          "name": "Container",
-          "slug": "layouts-container"
+            "url": "https://themeselection.com/support/",
+            "icon": "menu-icon tf-icons bx bx-support",
+            "name": "Support",
+            "slug": "support",
+            "target": "_blank"
         },
         {
-          "url": "/layouts/fluid",
-          "name": "Fluid",
-          "slug": "layouts-fluid"
-        },
-        {
-          "url": "/layouts/blank",
-          "name": "Blank",
-          "slug": "layouts-blank",
-          "target": "_blank"
+            "url": "https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html",
+            "icon": "menu-icon tf-icons bx bx-file",
+            "name": "Documentation",
+            "slug": "documentation",
+            "target": "_blank"
         }
-      ]
-    },
-    
-    {
-      "menuHeader": "Misc"
-    },
-    {
-      "url": "https://themeselection.com/support/",
-      "icon": "menu-icon tf-icons bx bx-support",
-      "name": "Support",
-      "slug": "support",
-      "target": "_blank"
-    },
-    {
-      "url": "https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html",
-      "icon": "menu-icon tf-icons bx bx-file",
-      "name": "Documentation",
-      "slug": "documentation",
-      "target": "_blank"
-    }
-  ]
+    ]
 }
