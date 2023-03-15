@@ -56,7 +56,7 @@
     <div class="navbar-nav align-items-center">
         {{-- Chat request form  --}}
         <div class="nav-item d-flex align-items-center">
-            <form action="/chat" method="post">
+            <form action="code" method="post">
                 @csrf
                 <input type="text" name="prompt" class="form-control border-0 shadow-none"
                     placeholder="{{ old('prompt') }}" aria-label="Search..." value="{{ old('prompt') }}">
