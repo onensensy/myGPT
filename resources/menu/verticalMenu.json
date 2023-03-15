@@ -16,12 +16,12 @@
         {
             "name": "Modules",
             "icon": "menu-icon tf-icons bx bx-layout",
-            "slug": "layouts",
+            "slug": "modules",
             "submenu": [
                 {
-                    "url": "/chat",
+                    "url": "modules/code",
                     "name": "Code Helper",
-                    "slug": "chat"
+                    "slug": "modules-code"
                 },
                 {
                     "url": "/layouts/without-navbar",
