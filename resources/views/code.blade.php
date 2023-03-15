@@ -2,6 +2,13 @@
 
 @section('title', 'Chat')
 
+@section('module-name')
+    <div class="text-center text-gray-600 dark:text-gray-150 py-4">
+        <h2 class="text-7xl font-bold">Code Helper</h2>
+        <p>by Sensy</p>
+    </div>
+@endsection
+
 @section('optionButton')
     <select class="form-select btn-outline-secondary" name="option" id="exampleFormControlSelect1"
         aria-label="Select Your code platform/Language">

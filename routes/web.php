@@ -20,6 +20,11 @@ $controller_path = 'App\Http\Controllers';
 Route::get('/index', function () {
     return view('index ');
 });
+
+Route::prefix('chat')->group(function () {
+    Route::get('/', [ChatController::class, 'index']);
+});
+
 Route::prefix('modules')->group(function () {
     Route::get('/code', function () {
         $title = '';
@@ -29,6 +34,8 @@ Route::prefix('modules')->group(function () {
 
     Route::post('/code', [CodeController::class, 'sendPrompt'])->name('modules-code');
 });
+
+
 
 // // Main Page Route
 // Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');

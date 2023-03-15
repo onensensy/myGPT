@@ -1,8 +1,10 @@
 @php
     $containerNav = $containerNav ?? 'container-fluid';
     $navbarDetached = $navbarDetached ?? '';
-    
+
 @endphp
+
+
 {{-- //Code helper Heading --}}
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -13,10 +15,9 @@
         color: gray
     }
 </style>
-<div class="text-center text-gray-600 dark:text-gray-150 py-4">
-    <h2 class="text-7xl font-bold">Code Helper</h2>
-    <p>by Sensy</p>
-</div>
+{{-- //module name --}}
+@yield('module-name')
+
 
 <!-- Navbar -->
 @if (isset($navbarDetached) && $navbarDetached == 'navbar-detached')
