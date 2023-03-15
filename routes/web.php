@@ -22,7 +22,7 @@ Route::get('/index', function () {
 });
 
 Route::prefix('chat')->group(function () {
-    Route::get('/', [ChatController::class, 'index']);
+    Route::get('/', [ChatController::class, 'index'])->name('chat');
 });
 
 Route::prefix('modules')->group(function () {
